@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Cleaner",
+    "description": "Delete several saved sessions at once from the sidebar, with a toggle for multi-select mode and a confirmation step."
+  }
+}

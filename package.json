@@ -1,0 +1,50 @@
+{
+  "name": "@local/session-cleaner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Batch delete saved chat sessions with a multi-select toggle in the sidebar.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xumou6b/dsh-session-cleaner.git"
+  },
+  "homepage": "https://github.com/xumou6b/dsh-session-cleaner#readme",
+  "bugs": {
+    "url": "https://github.com/xumou6b/dsh-session-cleaner/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "session",
+    "delete"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-connection"
+      ]
+    }
+  }
+}
